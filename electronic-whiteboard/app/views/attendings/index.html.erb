@@ -1,0 +1,25 @@
+<h1>Listing attendings</h1>
+
+<table>
+  <tr>
+    <th>First init</th>
+    <th>Last name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @attendings.each do |attending| %>
+  <tr>
+    <td><%= attending.first_init %></td>
+    <td><%= attending.last_name %></td>
+    <td><%= link_to 'Show', attending %></td>
+    <td><%= link_to 'Edit', edit_attending_path(attending) %></td>
+    <td><%= link_to 'Destroy', attending, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Attending', new_attending_path %>

@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @patient.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @patient.last_name %>
+</p>
+
+<p>
+  <b>Patient status:</b>
+  <%= @patient.patient_status %>
+</p>
+
+<p>
+  <b>Dilation:</b>
+  <%= @patient.dilation %>
+</p>
+
+<p>
+  <b>Effacement:</b>
+  <%= @patient.effacement %>
+</p>
+
+<p>
+  <b>Station:</b>
+  <%= @patient.station %>
+</p>
+
+<p>
+  <b>Last exam:</b>
+  <%= @patient.last_exam %>
+</p>
+
+<p>
+  <b>Membrane:</b>
+  <%= @patient.membrane %>
+</p>
+
+<p>
+  <b>Gest age:</b>
+  <%= @patient.gest_age %>
+</p>
+
+<p>
+  <b>Gravidity:</b>
+  <%= @patient.gravidity %>
+</p>
+
+<p>
+  <b>Parity:</b>
+  <%= @patient.parity %>
+</p>
+
+<p>
+  <b>Anesthesia interview:</b>
+  <%= @patient.anesthesia_interview %>
+</p>
+
+<p>
+  <b>Group B strep:</b>
+  <%= @patient.group_b_strep %>
+</p>
+
+<p>
+  <b>Blood type:</b>
+  <%= @patient.blood_type %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @patient.comments %>
+</p>
+
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>

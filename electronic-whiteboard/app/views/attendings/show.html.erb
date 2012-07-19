@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First init:</b>
+  <%= @attending.first_init %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @attending.last_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_attending_path(@attending) %> |
+<%= link_to 'Back', attendings_path %>

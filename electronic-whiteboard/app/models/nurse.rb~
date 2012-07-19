@@ -1,0 +1,3 @@
+class Nurse < ActiveRecord::Base
+  attr_accessible :first_init, :last_name
+end

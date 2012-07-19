@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First init:</b>
+  <%= @nurse.first_init %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @nurse.last_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_nurse_path(@nurse) %> |
+<%= link_to 'Back', nurses_path %>

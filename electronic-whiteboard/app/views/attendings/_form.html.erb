@@ -1,0 +1,25 @@
+<%= form_for(@attending) do |f| %>
+  <% if @attending.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@attending.errors.count, "error") %> prohibited this attending from being saved:</h2>
+
+      <ul>
+      <% @attending.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_init %><br />
+    <%= f.text_field :first_init %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,3 @@
+class Attending < ActiveRecord::Base
+  attr_accessible :first_init, :last_name
+end
