@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120719224620) do
+ActiveRecord::Schema.define(:version => 20120720000853) do
 
   create_table "attendings", :force => true do |t|
     t.string   "first_init"
@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(:version => 20120719224620) do
   create_table "patients", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
-     t.string   "patient_status"
     t.integer  "dilation"
     t.integer  "effacement"
     t.integer  "station"
@@ -39,12 +38,13 @@ ActiveRecord::Schema.define(:version => 20120719224620) do
     t.decimal  "gest_age"
     t.integer  "gravidity"
     t.integer  "parity"
-    t.string   "anesthesia_interview"
     t.string   "group_b_strep"
     t.string   "blood_type"
     t.text     "comments"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.string   "anesthesia_interview"
+    t.string   "patient_status"
   end
 
   create_table "rooms", :force => true do |t|
@@ -52,5 +52,23 @@ ActiveRecord::Schema.define(:version => 20120719224620) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "users", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end
