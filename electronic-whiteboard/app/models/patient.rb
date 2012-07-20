@@ -4,4 +4,8 @@ class Patient < ActiveRecord::Base
     :parity, :patient_status, :station
   
   belongs_to :room
+
+  def blood_types
+  	{:"O+" => 1, :"A-" => 2, :"B" => 3}.freeze
+  end
 end

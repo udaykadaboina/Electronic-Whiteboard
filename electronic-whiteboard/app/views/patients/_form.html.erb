@@ -65,7 +65,7 @@
   </div>
   <div class="field">
     <%= f.label :blood_type %><br />
-    <%= f.text_field :blood_type %>
+    <%= f.select :blood_type, @patient.blood_types, {:include_blank => true} %>
   </div>
   <div class="field">
     <%= f.label :comments %><br />
