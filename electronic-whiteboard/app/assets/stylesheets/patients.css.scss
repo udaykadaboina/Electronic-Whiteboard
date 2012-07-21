@@ -3,8 +3,29 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-div {
-	display:inline;
-	float: left;
-	padding-left: 5px;
+
+form li span {
+    color: #444444;
+    float: left;
+    margin: 0 4px 0 0;
+    padding: 0 0 8px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+form li {
+    display: block;
+    margin: 0;
+    padding: 4px 5px 2px 9px;
+    position: relative;
+}
+
+    form li:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
 }
